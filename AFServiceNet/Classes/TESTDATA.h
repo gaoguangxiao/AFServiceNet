@@ -15,4 +15,7 @@
 /// 返回JSON
 /// - Parameter name: <#name description#>
 + (NSString *)loadTestjson:(NSString *)name;
+
+/// 读取txt文档
++ (NSString *)loadTestTxt:(NSString *)name;
 @end

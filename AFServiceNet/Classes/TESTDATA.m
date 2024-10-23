@@ -38,4 +38,17 @@
     return jstrParam;
 }
 
++ (NSString *)loadTestTxt:(NSString *)name {
+    NSString *path = [[NSBundle mainBundle] pathForResource:name ofType:nil];
+    NSData *data = [NSData dataWithContentsOfFile:path];
+//    [NSData da]
+    //    //将JSON数据转NSArray或NSDictionary
+//    NSDictionary *dictArray = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+//    if (!dictArray) {
+//        return nil;
+//    }
+    NSString *jstrParam = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+//    URLLog(@"%@",jstrParam);
+    return jstrParam;
+}
 @end
